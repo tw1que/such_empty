@@ -1,9 +1,10 @@
 import DataTable from '@/components/DataTable';
 import ItemForm from '@/components/ItemForm';
 import { get, post } from '@/lib/api';
+import type { Item } from '@/types';
 
 export default async function ItemsPage() {
-  const items = await get<any[]>('/api/v1/items');
+  const items = await get<Item[]>('/api/v1/items');
   return (
     <div>
       <h1>Items</h1>
