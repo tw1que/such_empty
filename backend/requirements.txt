@@ -9,4 +9,5 @@ black
 isort
 flake8
 mypy
+httpx<0.28
 
