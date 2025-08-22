@@ -1,0 +1,37 @@
+[project]
+name = "inventory-backend"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "Inventory backend"
+dependencies = [
+    "fastapi==0.110.0",
+    "uvicorn[standard]==0.27.0",
+    "sqlalchemy==2.0.0",
+    "psycopg[binary]",
+    "alembic==1.12.0",
+    "pydantic==2.5.0",
+    "pydantic-settings==2.0.3",
+    "python-dotenv==1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-asyncio",
+  "httpx==0.27.2",
+  "black",
+  "isort",
+  "flake8",
+  "mypy",
+  "pre-commit",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.flake8]
+max-line-length = 120
