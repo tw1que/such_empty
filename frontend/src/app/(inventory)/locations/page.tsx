@@ -1,9 +1,10 @@
 import DataTable from '@/components/DataTable';
 import LocationForm from '@/components/LocationForm';
 import { get, post } from '@/lib/api';
+import type { Location } from '@/types';
 
 export default async function LocationsPage() {
-  const locations = await get<any[]>('/api/v1/locations');
+  const locations = await get<Location[]>('/api/v1/locations');
   return (
     <div>
       <h1>Locations</h1>

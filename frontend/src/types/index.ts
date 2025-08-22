@@ -1,4 +1,4 @@
-export interface Item {
+export interface Item extends Record<string, unknown> {
   id: number;
   sku: string;
   name: string;
@@ -7,7 +7,7 @@ export interface Item {
   is_active: boolean;
 }
 
-export interface Location {
+export interface Location extends Record<string, unknown> {
   id: number;
   code: string;
   name: string;
