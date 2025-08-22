@@ -1,10 +1,9 @@
-from fastapi.testclient import TestClient
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
+from fastapi.testclient import TestClient  # for testing  # isort: skip
 from app.api.v1 import deps
 from app.main import app
 from app.models import Base
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test.db"
 engine = create_engine(
@@ -43,7 +42,13 @@ def test_crud_items():
 
     r = client.put(
         f"/api/v1/items/{item_id}",
-        json={"sku": "s1", "name": "Item2", "description": None, "min_qty": 0, "is_active": True},
+        json={
+            "sku": "s1",
+            "name": "Item2",
+            "description": None,
+            "min_qty": 0,
+            "is_active": True,
+        },
     )
     assert r.status_code == 200
 
