@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+SQLAlchemy>=2
+alembic
+psycopg[binary]
+pydantic>=2
+pytest
+black
+isort
+flake8
+mypy
+

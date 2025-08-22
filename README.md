@@ -13,3 +13,9 @@ make backend-migrate
 Open http://localhost:3000 to view the app.
 
 See `backend/README.md` and `frontend/README.md` for more details.
+
+## CI
+- Backend en frontend draaien als losse jobs.
+- Backend gebruikt Postgres service op CI. Stel lokaal `DATABASE_URL` in of gebruik docker-compose.
+- Checks lopen op zowel `push` als `pull_request`; daarom zie je twee entries per job.
+
